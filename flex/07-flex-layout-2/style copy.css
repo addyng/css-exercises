@@ -28,61 +28,63 @@ body {
   border-radius: 4px;
 }
 
+/*  */
+
+/* make column */
 body {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
+  /* justify-content: space-between; */
 }
 
-.header {
+/* flex container for sidebar + cards */
+.center {
   display: flex;
-  align-items: center;
-  padding: 0 16px;
-  font-size: 32px;  
-  font-weight: 900;
-}
-
-.body {
   flex: 1;
+}
+
+/* cards flex container */
+.cards {
   display: flex;
+  flex-wrap: wrap;
+  padding: 32px;
 }
 
-.sidebar {
-  flex-shrink: 0;
+/* individual cards */
+.card {
+  margin: 16px;
   padding: 16px;
+  flex-basis: 300px;
 }
 
+/* sidebar */
 ul {
+  width: 300px;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 li {
-  margin-bottom: 16px;
+  margin: 16px;
 }
 
 a {
+  font-size: 24px;
   color: white;
   text-decoration: none;
-  font-size: 24px;
 }
 
-.container {
-  padding: 32px;
+.header {
+  font-size: 32px;
+  font-weight: 900;
   display: flex;
-  flex-wrap: wrap;
-}
-
-.card {
-  padding: 16px;
-  margin: 16px;
-  width: 300px;
+  align-items: center;
+  padding-left: 16px;
 }
 
 .footer {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
-
-/* my solution does the same but i put padding/margins in different selectors  */
